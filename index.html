@@ -19,11 +19,11 @@
   <main>
 
         <div ng-init='cars=[
-        {"title": "BMW", "model": "M5 F90", "passangers": 4, "color": "Grey"},
-        {"title": "Mersedes-Benz", "model": "S63 AMG w222", "passangers": 4, "color": "Black"},
-        {"title": "Toyota", "model": "Supra", "passangers": 2, "color": "Orange"},
-        {"title": "Yamaha", "model": "YFZ-R6 2020", "passangers": 2, "color": "Blue"},
-        {"title": "Range Rover", "model": "Discovery 2020", "passangers": 4, "color": "Brown"}
+        {"title": "BMW", "model": "M5 F90", "passangers": 4, "color": "Grey", "Condition": "New"},
+        {"title": "Mersedes-Benz", "model": "S63 AMG w222", "passangers": 4, "color": "Black", "Condition": "Completely new"},
+        {"title": "Toyota", "model": "Supra", "passangers": 2, "color": "Orange", "Condition": "Broken"},
+        {"title": "Yamaha", "model": "YFZ-R6 2020", "passangers": 2, "color": "Blue", "Condition": "New"},
+        {"title": "Range Rover", "model": "Discovery 2020", "passangers": 4, "color": "Brown", "Condition": "Broken"}
 
         ]'>
           
@@ -31,13 +31,14 @@
         <input  type="text" class="form-control" ng-model="search">
         <table class="table">
           <tr>
-            <th>Movies</th> <th>Model</th> <th>Passangers</th> <th>Color</th>
+            <th>Brand</th> <th>Model</th> <th>Passangers</th> <th>Color</th> <th>Condition</th>
           </tr>
           <tr ng-repeat="movie in cars | filter: search">
             <td style="background-color: #e6f5ef;">{{ movie.title }}</td>
             <td style="background-color: #dcf5eb;">{{ movie.model }}</td>
             <td style="background-color: #d3f5e9;">{{ movie.passangers }}</td>
             <td style="background-color: #c5eddd;">{{ movie.color }}</td>
+            <td style="background-color: #d0f2ec;">{{ movie.Condition }}</td>
           </tr>
         </table>
     </main>
